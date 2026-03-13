@@ -1,7 +1,6 @@
-pandas
+pandas<3.0
 matplotlib
 seaborn
 scikit-learn
-altair<5
 streamlit
 joblib
