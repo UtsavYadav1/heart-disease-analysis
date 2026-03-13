@@ -4,7 +4,7 @@
 This project presents a comprehensive analysis of heart disease data using **SQL** for exploratory data extraction, and **Python (Pandas, Scikit-Learn, Streamlit)** for deeper Exploratory Data Analysis (EDA) and predictive modeling. The goal is to uncover patterns and risk factors associated with heart disease, build a machine learning model, and serve it via an interactive web application.
 
 ## Live Demo
-Check out the live running application here: **[Link to be Added after Deployment]**
+Check out the live running application here: **[https://utsavyadav-heart-disease.streamlit.app](https://utsavyadav-heart-disease.streamlit.app)**
 
 ## Tools & Technologies
 - **SQL**: Used for querying and aggregating the dataset.
