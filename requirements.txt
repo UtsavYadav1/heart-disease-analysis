@@ -1,6 +1,4 @@
-pandas<3.0
-matplotlib
-seaborn
-scikit-learn==1.8.0
+scikit-learn
 streamlit
 joblib
+pandas
