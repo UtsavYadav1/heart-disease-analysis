@@ -2,5 +2,6 @@ pandas
 matplotlib
 seaborn
 scikit-learn
+altair<5
 streamlit
 joblib
