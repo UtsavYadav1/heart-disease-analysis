@@ -5,6 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
+import joblib
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -41,11 +42,13 @@ plt.close()
 
 # 4. Data Preprocessing for Machine Learning
 # Encode categorical variables
-le = LabelEncoder()
+label_encoders = {}
 categorical_cols = df.select_dtypes(include=['object']).columns
 
 for col in categorical_cols:
+    le = LabelEncoder()
     df[col] = le.fit_transform(df[col])
+    label_encoders[col] = le
 
 # Separate Features (X) and Target (y)
 X = df.drop('HeartDisease', axis=1)
@@ -59,7 +62,12 @@ print("Training Random Forest Classifier...")
 rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
 rf_model.fit(X_train, y_train)
 
-# 7. Model Evaluation
+# 7. Save Model and Encoders
+print("Saving model and encoders...")
+joblib.dump(rf_model, 'heart_disease_model.pkl')
+joblib.dump(label_encoders, 'label_encoders.pkl')
+
+# 8. Model Evaluation
 y_pred = rf_model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 
