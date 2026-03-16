@@ -66,13 +66,13 @@ The dashboard is fully interactive and allows users to visually explore health r
 
 ## 👥 Scenarios Addressed
 
-**Dr. Sharma (Cardiologist)**
+**Dr. Utsav (Cardiologist)**
 Identifying high-risk middle-aged patients and analyzing lifestyle correlations.
 
-**Ramesh (Policy Maker)**
+** Urvashi (Policy Maker)**
 Analyzing population trends to support public health policy decisions.
 
-**Anita (Patient)**
+**Tarun (Patient)**
 Monitoring personal health indicators against general benchmarks to guide lifestyle improvements.
 
 ---
