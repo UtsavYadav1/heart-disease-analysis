@@ -4,23 +4,42 @@ This project is a **web-based analytics platform** for analyzing heart disease d
 
 ---
 
-## 📊 Interactive Tableau Dashboard
+## Interactive Tableau Dashboard
 
-You can explore the **live interactive Tableau dashboard** here:
+You can explore the interactive Tableau dashboard for this project here:
 
-🔗 **Tableau Public Dashboard**
-https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2
+🔗 **Live Dashboard:**
+https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard3
 
-The dashboard provides insights such as:
+### Dashboard Visualizations Included
 
-* Age vs Heart Disease distribution
-* Smoking vs Heart Disease relationship
-* BMI vs Heart Disease analysis
-* Asthma vs Heart Disease correlation
+The dashboard provides multiple analytical views to understand heart disease patterns:
 
-These visualizations help users understand patterns and risk factors related to heart disease.
+1. **Age vs Heart Disease Risk**
+   Shows how heart disease risk varies across different age groups.
 
----
+2. **Smoking vs Heart Disease**
+   Analyzes the relationship between smoking habits and heart disease occurrence.
+
+3. **General Health Bubble Chart**
+   Visualizes overall population health distribution (Excellent, Very Good, Good, Fair, Poor).
+
+4. **Asthma vs Heart Disease**
+   Examines whether asthma patients show different heart disease patterns.
+
+5. **Stroke Distribution**
+   Displays the proportion of stroke cases in the dataset.
+
+### Purpose of the Dashboard
+
+The goal of this dashboard is to help:
+
+* Doctors identify high-risk patient groups
+* Policy makers analyze public health trends
+* Individuals understand lifestyle risk factors
+
+The dashboard is fully interactive and allows users to visually explore health risk patterns within the dataset.
+
 
 ## 🛠 Tech Stack
 
