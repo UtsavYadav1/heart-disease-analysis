@@ -9,8 +9,8 @@ SCENARIOS = {
         'title': 'Dr. Utsav - Clinical View',
         'role': 'Cardiologist',
         'goal': 'Identify high-risk middle-aged patients and lifestyle correlations.',
-        # Grader Note: Full profile link is https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2
-        'tableau_url': 'https://public.tableau.com/views/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2',
+         
+        'tableau_url': 'https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard3',
         'fallback_image': 'dashboard-fallback.png'
     },
     'urvashi': {
@@ -18,8 +18,8 @@ SCENARIOS = {
         'title': 'Urvashi - Policy Maker',
         'role': 'Government Health Dept.',
         'goal': 'Analyze regional trends and sedentary lifestyle impacts to form policies.',
-        # Grader Note: Full profile link is https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2
-        'tableau_url': 'https://public.tableau.com/views/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2',
+         
+        'tableau_url': 'https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard3',
         'fallback_image': 'dashboard-fallback.png'
     },
     'tarun': {
@@ -27,8 +27,8 @@ SCENARIOS = {
         'title': 'Tarun - Personal Health',
         'role': 'Patient',
         'goal': 'Monitor personal health risks against benchmarks and take action.',
-        # Grader Note: Full profile link is https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2
-        'tableau_url': 'https://public.tableau.com/views/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard2',
+        
+        'tableau_url': 'https://public.tableau.com/app/profile/utsav.yadav8693/viz/HeartDiseaseAnalysisDashboard_17736583160470/Dashboard3',
         'fallback_image': 'dashboard-fallback.png'
     }
 }
