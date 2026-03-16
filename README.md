@@ -1,43 +1,42 @@
-# Heart Disease SQL & Machine Learning Analysis
+# Heart Disease Analysis Platform
 
-## Overview
-This project presents a comprehensive analysis of heart disease data using **SQL** for exploratory data extraction, and **Python (Pandas, Scikit-Learn, Streamlit)** for deeper Exploratory Data Analysis (EDA) and predictive modeling. The goal is to uncover patterns and risk factors associated with heart disease, build a machine learning model, and serve it via an interactive web application.
+This project is a web-based analytics platform for analyzing heart disease data. It has been built using **Flask** and embeds interactive **Tableau Dashboards** to cater to various user scenarios (Clinical, Policy, and Personal).
 
-## Live Demo
-Check out the live running application here: **[https://utsavyadav-heart-disease.streamlit.app](https://utsavyadav-heart-disease.streamlit.app)**
+## Tech Stack
+- **Backend:** Python, Flask
+- **Data Visualization:** Tableau
+- **Frontend:** HTML, CSS (Premium Glassmorphism Dark Theme)
+- **Machine Learning (Optional Expansion):** scikit-learn, joblib
 
-## Tools & Technologies
-- **SQL**: Used for querying and aggregating the dataset.
-- **Python**: 
-  - `pandas` for data manipulation.
-  - `scikit-learn` for training a Random Forest classification model.
-  - `streamlit` for creating an interactive web interface.
-  - `joblib` for saving and loading the trained model state.
-- **GitHub**: Version control and project showcasing.
+## Scenarios Addressed
+1. **Dr. Sharma (Cardiologist):** Identifying high-risk middle-aged patients and lifestyle correlations.
+2. **Ramesh (Policy Maker):** Analyzing regional trends to form public health policies.
+3. **Anita (Patient):** Monitoring personal health metrics against benchmarks to make lifestyle choices.
 
-## Repository Contents
-- `app.py` - The interactive **Streamlit web application** that accepts user health data and predicts heart disease risk in real-time.
-- `analysis.py` - The Python script responsible for cleaning the data, generating EDA plots, and training the predictive Machine Learning model. Running this outputs the `.pkl` files.
-- `heart_disease_model.pkl` & `label_encoders.pkl` - Saved model states allowing the Streamlit app to run instantly.
-- `Heart_new2.csv` - The primary dataset.
-- `queries.sql` - SQL scripts containing data analysis queries.
-- `requirements.txt` - Python package dependencies needed to run the analysis and the app.
+## How to Run the App
 
-## How to Run the App Locally
-To run the interactive demonstration on your own machine:
+1. **Install requirements:**
+   `pip install -r requirements.txt`
+   
+2. **Run the Flask application:**
+   `flask --app app.py run` (or simply `python app.py`)
 
-1. Clone the repository and install dependencies:
-```bash
-pip install -r requirements.txt
-```
+3. **View the Application:**
+   Open a browser and navigate to `http://127.0.0.1:5000`
 
-2. Generate the trained model files (if not already present):
-```bash
-python analysis.py
-```
+## Updating Tableau Dashboards
 
-3. Launch the Streamlit Web Application:
-```bash
-streamlit run app.py
-```
-This will open a new tab in your web browser where you can interact with the Heart Disease prediction model.
+Currently, `app.py` uses placeholder Tableau Public URLs. To connect your own Tableau workbooks:
+
+1. Open `dashboard.twbx` in Tableau Desktop or Tableau Public.
+2. Publish the workbook to Tableau Public or your own Tableau Server.
+3. Click the "Share" button on your published visualization and copy the embed link.
+4. Replace the `tableau_url` strings in the `SCENARIOS` dictionary within `app.py`.
+
+## Files
+- `app.py` → Main Flask application and routing
+- `templates/` → HTML templates for the UI
+- `static/` → CSS styling assets
+- `dataset.csv` → Raw dataset used for analysis
+- `queries.sql` → SQL queries for data insights
+- `dashboard.twbx` → The original Tableau workbook

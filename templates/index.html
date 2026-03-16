@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Home | CardioViz{% endblock %}
+{% block header_title %}Welcome to CardioViz{% endblock %}
+{% block header_subtitle %}Select a scenario to explore the interactive Tableau dashboards{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="intro-section">
+        <p class="lead-text">
+            Heart disease remains one of the leading causes of mortality worldwide. 
+            This platform leverages data visualization to transform raw health data into 
+            meaningful insights, helping healthcare providers, policymakers, and individuals 
+            make better decisions.
+        </p>
+    </div>
+
+    <div class="scenarios-grid">
+        {% for key, s in scenarios.items() %}
+        <div class="scenario-card glass-card">
+            <div class="card-header">
+                <h3>{{ s.title }}</h3>
+                <span class="badge">{{ s.role }}</span>
+            </div>
+            <div class="card-body">
+                <p>{{ s.goal }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('dashboard', scenario_id=key) }}" class="btn primary-btn">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

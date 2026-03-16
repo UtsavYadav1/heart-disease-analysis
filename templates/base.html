@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Heart Disease Analysis Dashboard{% endblock %}</title>
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Tableau JS API -->
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-panel">
+            <div class="sidebar-header">
+                <h2>❤️ CardioViz</h2>
+                <p>Analytics Platform</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="{{ url_for('home') }}" class="nav-link {% if request.endpoint == 'home' %}active{% endif %}">
+                    <span class="icon">🏠</span> Home Overview
+                </a>
+                
+                <h3 class="nav-section-title">Dashboards</h3>
+                
+                {% for key, s in scenarios.items() %}
+                <a href="{{ url_for('dashboard', scenario_id=key) }}" 
+                   class="nav-link {% if request.endpoint == 'dashboard' and request.view_args.get('scenario_id') == key %}active{% endif %}">
+                    <span class="icon">📊</span> {{ s.title }}
+                </a>
+                {% endfor %}
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>Data updated: Today</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content glass-panel">
+            <header class="main-header">
+                <h1>{% block header_title %}Heart Disease Analysis{% endblock %}</h1>
+                <p class="subtitle">{% block header_subtitle %}Empowering decisions through data visualization{% endblock %}</p>
+            </header>
+            
+            <div class="content-body">
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+    </div>
+</body>
+</html>
